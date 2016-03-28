@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Convert region to SQL</title>
+        <link rel="stylesheet" href="./bootstrap.css">
+        <link rel="stylesheet" href="./style.css">
+        <script src="./main.js"></script>
+    </head>
+    <body>
+        <div>
+            <div class="col-sm-6">
+                <h1 class="text-center">Convert a Region to MySQL</h1>
+                <form>
+                    <div class="col-xs-12">
+                        <div class="col-sm-4">
+                            Table name
+                        </div>
+                        <div class="col-sm-8">
+                            <input type="text" id="table_name" value="user">
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="col-sm-4">
+                            Latitude column name
+                        </div>
+                        <div class="col-sm-8">
+                            <input type="text" id="latitude_column" value="latitude">
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="col-sm-4">
+                            Longitude column name
+                        </div>
+                        <div class="col-sm-8">
+                            <input type="text" id="longitude_column" value="longitude">
+                        </div>
+                    </div>
+                    <pre>
+                    select * from <span id="table_output">user</span> where 
+                    <span id="condition">1 = 0</span>;
+                    </pre>
+                </form>
+            </div>
+            <div class="col-sm-6">
+                <div id="map">
+                </div>
+            </div>
+        </div>
+        <script src="https://maps.googleapis.com/maps/api/js?callback=ready"></script>
+    </body>
+</html>
